@@ -45,7 +45,6 @@ spec:
             timeoutSeconds: 5
             periodSeconds: 10
             initialDelaySeconds: 20
-            # 실패시 타임아웃시간/인터벌/프로그 대기 시작
           readinessProbe:
             httpGet:
           path: /wrong
