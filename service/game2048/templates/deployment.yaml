@@ -37,17 +37,17 @@ spec:
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
-              protocol: TCP     
+              protocol: TCP
           livenessProbe:
             httpGet:
-          path: /wrong
+              path: /wrong
               port: http
             timeoutSeconds: 5
             periodSeconds: 10
             initialDelaySeconds: 20
           readinessProbe:
             httpGet:
-          path: /wrong
+              path: /wrong
               port: http
             timeoutSeconds: 5
             periodSeconds: 10
