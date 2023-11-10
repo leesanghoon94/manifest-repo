@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 appName: "game2048"
-replicaCount: 3
+replicaCount: 2
 
 image:
   repository: 124121153800.dkr.ecr.ap-northeast-2.amazonaws.com/sanghoon-ecr
@@ -27,7 +27,7 @@ service:
 ingress:
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/load-balancer-name: fastc-alb
+    alb.ingress.kubernetes.io/load-balancer-name: tf-sanghoon-alb
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
@@ -64,8 +64,8 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-nodeSelector:
-  nodeType: service-2023
+# nodeSelector:
+#   nodeType: service-2023
 
 tolerations:
   - key: service
