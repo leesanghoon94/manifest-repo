@@ -12,6 +12,7 @@ metadata:
     alb.ingress.kubernetes.io/healthcheck-path: /
     alb.ingress.kubernetes.io/subnets: subnet-0d4f056dd10104d02, subnet-009f6cff5a8e3860d
 spec:
+  ingressClassName: alb
   rules:
     - http:
         paths:
