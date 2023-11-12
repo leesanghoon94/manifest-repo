@@ -57,6 +57,7 @@ autoscaling:
   maxReplicas: 10
   targetCPUUtilizationPercentage: 20
   # targetMemoryUtilizationPercentage: 80
+
 nodeSelector:
   nodeType: service-2023
 tolerations:
